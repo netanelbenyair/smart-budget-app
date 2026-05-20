@@ -1,0 +1,67 @@
+/* src/components/AI.css */
+
+.ai-chat-container {
+    border: 2px solid #3f51b5; /* כחול בולט */
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f9f9f9; /* אפור בהיר */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* צל עמוק */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ai-chat-container h2 {
+    color: #3f51b5;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+.ai-chat-container p.ai-subtitle {
+    margin: 0 0 20px 0;
+    color: #555;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 12px;
+    direction: rtl; /* כתיבה מימין לשמאל */
+}
+
+.ai-input {
+    flex-grow: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    background-color: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ai-input:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+}
+
+.ai-send-button {
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.ai-send-button:hover {
+    background-color: #303f9f;
+}
+
+.ai-send-button:active {
+    transform: translateY(1px); /* אפקט לחיצה */
+}
