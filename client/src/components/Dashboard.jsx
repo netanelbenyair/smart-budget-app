@@ -1,29 +1,9 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 
 
-const Dashboard = () => {
+const Dashboard = ({buckets}) => {
 
-    const [buckets , setBuckets] = useState([]);
-
-    useEffect(()=>{
-        const fetchBuckets = async()=>{
-            try{
-                const response = await fetch('http://localhost:4000/api/buckets')
-                if(!response.ok) throw new Error('בעיה בשרת')
-
-                    const data = await response.json();
-                    console.log(data);
-                    
-                    setBuckets(data);
-                }
-                catch(error){
-                    console.error("error fetching buckets:" ,error);
-                    
-                }
-        } 
-
-        fetchBuckets();
-    },[])
+  
 
 
 

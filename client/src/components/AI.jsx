@@ -2,7 +2,7 @@
 import './AI.css'; // מייבאים את קובץ העיצוב הנפרד
 import { useState } from 'react';
 
-const AI = () => {
+const AI = ({ onExpenseAdded }) => {
     // סטייט לניהול הטקסט שהמשתמש מקליד
     const [message, setMessage] = useState('');
     
@@ -18,6 +18,8 @@ const AI = () => {
                 body:JSON.stringify({text:message})
             })
             if(response.ok){console.log('ההןדעה נשלחה בהצלחה');
+                setMessage('');
+                onExpenseAdded();
             }
         } 
         catch(error){
